@@ -1,0 +1,92 @@
+---
+title: "ECS {Course} - Homework 0"
+author:  John Doe,  \break \{jdoe\} [at] ucdavis [dot] edu # Include your name, and UC Davis email
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\pagebreak[4]
+
+# Problem 1
+
+Begin writing your solution [^1] to a problem here. If you've used Markdown or LaTeX before, this isn't all that different. Use LaTeX to typeset mathematical equations. LaTeX code is inserted using `$<code>$`
+
+[^1]: Template written by Aakash Prabhu, Class of 2019.
+
+For example: Let $P$ be the probability that I do well in this class. Then, $Q = \bar{P} = 1 - P$ is the probability that I don't do well in this class.
+
+
+# Problem 2
+
+Sometimes a problem might have multiple parts to it. You can nest into different depths like this:
+
+## 2.1
+
+## 2.2
+
+### 2.2.1
+
+### 2.2.2
+
+Clicking **Knit** will generate a document that includes markdown output as well as output from embedded *R code chunks*. R code chunks are discussed in the next section.
+
+# Problem 3
+
+You will often write out R code, run it, and add it to your homework. Add R code chunks to your R markdown document like this: 
+
+```{r whateverYouWantToNameThis}
+for(i in 1:10){
+  print(i)
+}
+```
+
+## 3.1
+
+RMarkdown displays the code, runs it and then outputs it. To display the code and hide its output, use `echo=FALSE`:
+
+```{r anotherCodeChunk, echo=FALSE}
+for(i in 1:10){
+  print(i)
+}
+```
+
+
+## 3.2
+
+If you only want to display the R code but not the output, use `results='hide'`: 
+
+```{r yetAnotherCodeChunk, results='hide'}
+for(i in 1:10){
+  print(i)
+}
+```
+
+# Problem 4
+
+To have a code chunk depend on another, use `dependson`: 
+
+```{r oneLastExample, results='hide'}
+x = 10
+y = 15
+```
+
+```{r oneLastExample2, dependson='oneLastExample'}
+z = (x + y) * 10
+print(z)
+```
+
+# Classmate Collaborators
+
+Include the names and email IDs of everyone you collaborated with.
+
+1. Person A, \{personA\} [at] ucdavis [dot] edu
+2. Person B, \{personB\} [at] ucdavis [dot] edu
+
+
